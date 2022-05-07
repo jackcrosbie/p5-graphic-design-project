@@ -1,0 +1,10 @@
+/* ------------------------- allows our h100 classes to work */
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/cool-background.png') no-repeat center center fixed;
+    background-size: cover;
+}
