@@ -7,4 +7,18 @@ html {
 body {
     background: url('/media/cool-background.png') no-repeat center center fixed;
     background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ------------------------- header nav links */
+
+header,
+a,
+a:hover,
+a:focus,
+a:active {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: white;
 }

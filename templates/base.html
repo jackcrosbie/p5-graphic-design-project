@@ -18,6 +18,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
+
     {% endblock %}
 
     {% block extra_css %}
@@ -49,8 +52,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Pricing</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Members Area</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Members Area</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Sign Up</a>
+                    <a class="dropdown-item" href="#">Login</a>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
