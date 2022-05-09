@@ -24,7 +24,7 @@ a:active {
     color: white;
 }
 
-/* ------------------------- header nav links */
+/* ------------------------- Homepage link */
 
 #homepage-btn {
     color: white;
@@ -33,6 +33,8 @@ a:active {
     margin-top: 10em;
 }
 
+/* ------------------------- animate.css */
+
 .animate__animated.animate__bounce {
-    --animate-duration: 3s;
+    --animate-duration: 2s;
 }
