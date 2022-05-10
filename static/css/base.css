@@ -10,6 +10,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* ------------------------- headings */
+
+#headings {
+    margin-top: 5em;
+    display: flex;
+    text-align: center;
+    width: 100%;
+}
 
 /* ------------------------- header nav links */
 
@@ -28,8 +36,6 @@ a:active {
 
 #homepage-btn {
     color: white;
-    display: flex;
-    justify-content: center;
     margin-top: 10em;
 }
 
@@ -41,6 +47,6 @@ a:active {
 
 /* ------------------------- allauth forms */
 
-#allauth-forms {
-    background-color: white;
+#forms {
+    margin-top: 10em;
 }
