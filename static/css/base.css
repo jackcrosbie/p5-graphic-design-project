@@ -19,6 +19,7 @@ body {
     width: 100%;
 }
 
+
 /* ------------------------- header nav links */
 
 header,
@@ -32,11 +33,10 @@ a:active {
     color: white;
 }
 
-/* ------------------------- Homepage link */
-
-#homepage-btn {
-    color: white;
+#homepage-link {
     margin-top: 10em;
+    text-align: center;
+    font-size: 2em;
 }
 
 /* ------------------------- animate.css */
