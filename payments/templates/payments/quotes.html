@@ -1,2 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
+
+{% block content %}
+<div class="container-fluid text-white">
+    <div class="row">
+        <div class="col">
+            <h2 class="d-flex justify-content-center" id="headings">Get in Touch</h1>
+                <p class="text-center">
+                    To find out more or to ask about a specific project please don't hesitate to contact us using the
+                    form below<br>
+
+                    We'll do our best to accommodate your requests and we look forward to hearing from you!
+                </p>
+        </div>
+        <div class="col mx-auto form-group text-white">
+            <form action="{% url 'quotes' %}" method="post" id="forms">
+                {% csrf_token %}
+                <table>
+                    {{ form.as_table }}
+                </table>
+                <div class="mt-3 d-flex justify-content-center">
+                    <button class="btn btn-dark" type="submit" value="Submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
