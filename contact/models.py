@@ -9,3 +9,7 @@ class ContactUs(models.Model):
     email = models.EmailField()
     date = models.DateField()
     message = models.TextField()
+
+    class Meta:
+        """ change name for admin panel """
+        verbose_name_plural = "Contact Us"
