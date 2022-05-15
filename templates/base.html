@@ -55,11 +55,14 @@
                 <a class="nav-link active" href="{% url 'about' %}">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#">Gallery</a>
+                <a class="nav-link active" href="#">Pricing</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Payments</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Make a Payment</a>
+                    <a href="#" class="dropdown-item">Get a Quote</a>
+                </div>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Members Area</a>
                 <div class="dropdown-menu">
@@ -79,7 +82,18 @@
     </header>
 
     {% if messages %}
-    <div class="message-container"></div>
+    <div class="message-container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
     {% endif %}
 
     {% block page_header %}
