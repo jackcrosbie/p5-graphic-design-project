@@ -97,6 +97,7 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-info',
@@ -107,6 +108,8 @@ MESSAGE_TAGS = {
 }
 
 WSGI_APPLICATION = 'graphic_design.wsgi.application'
+
+CSRF_TRUSTED_ORIGINS = ['https://8000-jackcrosbie-p5graphicde-q9evymuj4sb.ws-eu45.gitpod.io']
 
 
 # Database
