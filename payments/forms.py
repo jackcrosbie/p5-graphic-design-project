@@ -8,5 +8,5 @@ class QuotesForm(forms.ModelForm):
         """ form models and fields used"""
         model = Quotes
         fields = [
-            'name', 'phone_number', 'email', 'message'
+            'name', 'phone_number', 'email', 'project_type', 'deadline_date', 'message',
             ]
