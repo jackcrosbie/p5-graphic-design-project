@@ -27,4 +27,4 @@ class ChangePasswordView(SuccessMessageMixin, PasswordChangeView):
     """ view to enable users to update or change their password """
     template_name = 'profiles/change_password.html'
     success_message = "Successfully Changed Your Password"
-    success_url = "profiles/"
+    success_url = "/"
