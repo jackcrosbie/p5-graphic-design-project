@@ -37,12 +37,15 @@ a:active {
     margin-top: 10em;
     text-align: center;
     font-size: 2em;
+    height: 200px;
 }
 
-/* ------------------------- animate.css */
+/* ------------------------- bounce effect */
 
 .animate__animated.animate__bounce {
-    --animate-duration: 2s;
+    display: inline-block;
+    margin: 0 0.5rem;
+    --animate-duration: 2.5s;
 }
 
 /* ------------------------- allauth forms */
