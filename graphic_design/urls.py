@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from profiles.views import ChangePasswordView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +26,5 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('payments/', include('payments.urls')),
     path('profiles/', include('profiles.urls')),
+    path('password-change/', ChangePasswordView.as_view(), name='password_change'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
