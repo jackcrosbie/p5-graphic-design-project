@@ -10,3 +10,7 @@ def index(request):
 def about(request):
     """ Return homepage """
     return render(request, 'home/about.html')
+
+def pricing(request):
+    """ Return homepage """
+    return render(request, 'home/pricing.html')
