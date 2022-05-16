@@ -26,5 +26,7 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('payments/', include('payments.urls')),
     path('profiles/', include('profiles.urls')),
-    path('password-change/', ChangePasswordView.as_view(), name='password_change'),
+    path('reviews/', include('reviews.urls')),
+    path('password-change/', ChangePasswordView.as_view(),
+         name='password_change'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
