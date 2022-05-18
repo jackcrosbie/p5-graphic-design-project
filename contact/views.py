@@ -10,4 +10,4 @@ class ContactUsFormView(CreateView):
     model = ContactUs()
     template_name = "contact/contact.html"
     form_class = ContactUsForm
-    success_url = '#'
+    success_url = '/'
