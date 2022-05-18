@@ -1,7 +1,7 @@
 """ imports from django and views.py"""
 from django.urls import path
-from . import views
+from .views import ReviewFormView
 
 urlpatterns = [
-    path('reviews/', views.reviews, name='reviews'),
+    path('', ReviewFormView.as_view(), name='reviews'),
 ]
