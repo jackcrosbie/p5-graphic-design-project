@@ -22,6 +22,12 @@ body {
 
 /* ------------------------- header nav links */
 
+.nav {
+    background: #061D25;
+    display: flex;
+    padding: 10px 0;
+}
+
 li>a {
     font-size: 1.7em;
 }
@@ -60,4 +66,27 @@ h4>a {
 
 #forms {
     margin-top: 10em;
+}
+
+/* ------------------------- footer */
+
+.footer {
+    background: #061D25;
+    padding: 10px 0;
+}
+
+.footer a {
+    color: #70726F;
+    font-size: 20px;
+    padding: 10px;
+    border-right: 1px solid #70726F;
+    transition: all .5s ease;
+}
+
+.footer a:first-child {
+    border-left: 1px solid #70726F;
+}
+
+.footer a:hover {
+    color: white;
 }
