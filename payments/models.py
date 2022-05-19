@@ -1,5 +1,6 @@
 """ django imports """
 from django.db import models
+import uuid
 
 
 project_choices = (
@@ -13,6 +14,7 @@ project_choices = (
 class Quotes(models.Model):
 
     """ quote form categories and attributes """
+    quote_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=16, unique=True)
     email = models.EmailField()
@@ -21,3 +23,6 @@ class Quotes(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     deadline_date = models.CharField(max_length=20)
     message = models.TextField()
+
+    def __str__(self):
+        return self.quote_id
