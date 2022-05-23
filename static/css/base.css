@@ -12,13 +12,13 @@ body {
 
 .full-page {
     position: relative;
-    height: 95.5vh;
+    height: 95vh;
 }
 
 /* ------------------------- headings */
 
 #headings {
-    margin-top: 5em;
+    margin-top: 4em;
     display: flex;
     text-align: center;
     width: 100%;
@@ -50,7 +50,7 @@ a:active {
 /* ------------------------- homepage link/logo */
 
 #homepage-link {
-    margin-top: 17em;
+    margin-top: 15em;
     text-align: center;
     height: 200px;
 }
@@ -70,7 +70,7 @@ h4>a {
 /* ------------------------- allauth forms */
 
 #forms {
-    margin-top: 10em;
+    margin-top: 6em;
 }
 
 /* ------------------------- footer */

@@ -48,8 +48,8 @@
 
 <body>
     <!-- fixed header with navbar for all pages -->
-    <header class="container-fluid fixed-top">
-        <ul class="nav justify-content-center mt-4">
+    <header class="container-fluid">
+        <ul class="nav justify-content-center">
             <li class="nav-item">
                 <a class="nav-link active" href="{% url 'home' %}">Home</a>
             </li>
@@ -107,7 +107,7 @@
 
     {% block postloadjs %}
     {% endblock %}
-    <footer class="footer">
+    <footer class="footer mt-4">
         <div class="container text-center">
             <a href="#"><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
