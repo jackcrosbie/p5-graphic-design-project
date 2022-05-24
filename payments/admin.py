@@ -1,3 +1,4 @@
+""" django imports and imports from models """
 from django.contrib import admin
 from .models import Quotes
 
