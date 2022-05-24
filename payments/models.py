@@ -14,7 +14,7 @@ project_choices = (
 class Quotes(models.Model):
 
     """ quote form categories and attributes """
-    quote_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+    quote_id = models.CharField(max_length=32, null=False, editable=False)
     name = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=16, unique=True)
     email = models.EmailField()
@@ -24,9 +24,15 @@ class Quotes(models.Model):
     deadline_date = models.CharField(max_length=20)
     message = models.TextField()
 
+    def _generate_quote_id(self):
+        """
+        Generate a random, unique quote number using UUID
+        """
+        return uuid.uuid4().hex.upper()
+
     class Meta:
         """ change name for admin panel """
         verbose_name_plural = "Quotes"
 
     def __str__(self):
-        return self.name
+        return self.quote_id
