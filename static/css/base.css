@@ -67,6 +67,12 @@ h4>a {
     --animate-duration: 2.5s;
 }
 
+/* ------------------------- bootstrap image carousel */
+
+.carousel-inner img {
+    margin: auto;
+}
+
 /* ------------------------- headshot photo */
 
 .headshot_photo {
