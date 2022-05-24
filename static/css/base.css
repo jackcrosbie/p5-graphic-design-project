@@ -67,6 +67,14 @@ h4>a {
     --animate-duration: 2.5s;
 }
 
+/* ------------------------- headshot photo */
+
+.headshot_photo {
+    display: inline-block;
+    margin-left: 8em;
+    margin-top: 2em;
+}
+
 /* ------------------------- allauth forms */
 
 #forms {
