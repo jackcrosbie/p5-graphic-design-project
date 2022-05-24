@@ -3,6 +3,3 @@ from .models import Quotes
 
 # Register your models here.
 admin.site.register(Quotes)
-
-        
-    

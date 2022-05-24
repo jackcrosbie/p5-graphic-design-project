@@ -18,7 +18,7 @@ project_choices = (
 class Quotes(models.Model):
 
     """ quote form categories and attributes """
-    quote_id = models.CharField(max_length=32, null=False, editable=False)
+    quote_id = models.CharField(max_length=32, default="", null=False, editable=False)
     name = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=16, unique=True)
     email = models.EmailField()
