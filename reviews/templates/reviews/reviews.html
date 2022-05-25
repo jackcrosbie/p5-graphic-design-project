@@ -24,15 +24,17 @@
             </form>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
+    <div class="row mt-5">
+        <div class="col col-md-3 reviews">
             <ul>
                 {% for review in object_list %}
-                <li>{{ review.title }}
-                    <a href="{% url 'reviews_detail' review.pk %}">{{ review.review }}</a>
-                    {{ review.user }}
-                    {{ review.rate }}
-                    {{ review.created_at }}</li>
+                <li>
+                    <h1 class="pt-3">Title: {{ review.title }}</h1><br>
+                    <a href="{% url 'reviews_detail' review.pk %}">{{ review.review }}</a><br>
+                    {{ review.user }}<br>
+                    {{ review.rate }} Stars<br>
+                    {{ review.created_at }}
+                </li>
                 {% endfor %}
             </ul>
         </div>

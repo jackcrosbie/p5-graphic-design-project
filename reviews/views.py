@@ -1,14 +1,14 @@
 """ imports from django, models.py and forms.py """
 from django.views.generic import ListView, DetailView
 from .models import UserReviews
-from .forms import ReviewForm
+from .forms import UserReviewForm
 
 
 class ReviewListView(ListView):
     """ view for generating the review list """
     model = UserReviews
     template_name = "reviews/reviews.html"
-    form_class = ReviewForm
+    form_class = UserReviewForm
     success_url = '/'
 
 

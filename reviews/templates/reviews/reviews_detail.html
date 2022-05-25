@@ -2,15 +2,20 @@
 {% load static %}
 
 {% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col-md-6 offset-md-2 card">
+            <div class="card-body">
+                <h1>{{ object.title }}</h1>
 
-<div class="row">
-    <div class="col text-white">
-        {{ object.title }}
-        {{ object.user }}
-        {{ object.review }}
-        {{ object.rate }}
-        {{ object.created_at }}
+                <p>{{ object.review }}</p>
+                By: {{ object.user }}<br>
+                {{ object.rate }} Star<br>
+                {{ object.created_at }}<br>
+                <a href="{% url 'reviews' %}" class="btn btn-secondary">Back</a>
+
+            </div>
+        </div>
     </div>
 </div>
-
 {% endblock %}
