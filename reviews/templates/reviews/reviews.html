@@ -2,29 +2,24 @@
 {% load static %}
 
 {% block content %}
-<div class="container-fluid text-white full-page">
+<div class="container-fluid text-white">
     <div class="row mt-5">
+        {% for review in object_list %}
         <div class="col col-md-3 reviews">
-            <ul>
-                {% for review in object_list %}
-                <li>
-                    <h1 class="pt-3">Title: {{ review.title }}</h1>
-                    {% if request.user.is_authenticated %}
-                    {% if user.id == review.user.id %}
-                    <a href="{% url 'update_review' review.pk %}">Edit</a>
-                    <a href="{% url 'delete_review' review.pk %}">Delete</a><br>
-                    {% endif %}
-                    {% endif %}
-                    <a href="{% url 'reviews_detail' review.pk %}">{{ review.review|slice:":50" }}</a><br>
-                    {{ review.user }}<br>
-                    {{ review.rate }} Stars<br>
-                    {{ review.created_at }}
+            <h1 class="pt-3">Title: {{ review.title }}</h1>
+            {% if request.user.is_authenticated %}
+            {% if user.id == review.user.id %}
+            <a href="{% url 'update_review' review.pk %}">Edit</a>
+            <a href="{% url 'delete_review' review.pk %}">Delete</a><br>
+            {% endif %}
+            {% endif %}
+            <a href="{% url 'reviews_detail' review.pk %}">{{ review.review|slice:":50" }}</a><br>
+            {{ review.user }}<br>
+            {{ review.rate }} Stars<br>
+            {{ review.created_at }}
 
-
-                </li>
-                {% endfor %}
-            </ul>
         </div>
+        {% endfor %}
     </div>
     <div class="row">
         <div class="col">

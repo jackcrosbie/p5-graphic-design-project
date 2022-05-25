@@ -87,6 +87,7 @@ h4>a {
 /* ------------------------- review posts */
 
 .reviews {
+    height: 85vh;
     margin-left: 5px;
     padding-left: 5px;
     width: 50px;
@@ -94,6 +95,7 @@ h4>a {
     border: 1px solid black;
     background: #061D25;
     opacity: .9;
+    overflow: hidden;
 }
 
 /* ------------------------- headshot photo */
