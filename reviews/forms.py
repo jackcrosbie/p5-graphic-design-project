@@ -1,12 +1,12 @@
 """ django and model imports """
 from django import forms
-from .models import Review
+from .models import UserReviews
 
 class ReviewForm(forms.ModelForm):
     """ meta data to generate contact us form """
     class Meta:
         """ form model, fields and widgets used"""
-        model = Review
+        model = UserReviews
         fields = [
-            'user', 'comment', 'rate'
+            'user', 'review', 'rate'
             ]

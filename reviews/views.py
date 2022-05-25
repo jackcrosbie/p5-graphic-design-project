@@ -1,13 +1,13 @@
 """ imports from django, models.py and forms.py """
-from django.shortcuts import render
-from .models import Review
-from django.views.generic.edit import CreateView
+from .models import UserReviews
 from .forms import ReviewForm
+from django.views.generic import ListView
 
 
-class ReviewFormView(CreateView):
+class ReviewListView(ListView):
     """ view for generating the contact form """
-    model = Review()
+    model = UserReviews()
     template_name = "reviews/reviews.html"
     form_class = ReviewForm
     success_url = '/'
+

@@ -24,5 +24,17 @@
             </form>
         </div>
     </div>
+    <div class="row">
+        <div class="col">
+            <ul>
+                {% for review in object_list %}
+                <li>{{ review.user }}
+                    {{ review.review }}
+                    {{ review.rate }}
+                    {{ review.created_at }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </div>
 {% endblock %}
