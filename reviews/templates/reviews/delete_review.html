@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid text-white full-page">
+    <div class="row">
+        <div class="col">
+            <h2 class="d-flex justify-content-center" id="headings">Delete Your Review</h2>
+            <br>
+            <h3>Delete: {{ object.title }}</h3>
+            <hr>
+        </div>
+        <div class="col mx-auto form-group text-white">
+            <form method="post" id="forms">
+                {% csrf_token %}
+                <div class="mt-3 d-flex justify-content-center">
+                    <h2>ARE YOU SURE?</h2>
+                    <button class="btn btn-dark" type="submit" value="Submit">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

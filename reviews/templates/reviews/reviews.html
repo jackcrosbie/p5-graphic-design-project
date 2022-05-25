@@ -3,33 +3,14 @@
 
 {% block content %}
 <div class="container-fluid text-white full-page">
-    <div class="row">
-        <div class="col">
-            <h2 class="d-flex justify-content-center" id="headings">Get in Touch</h2>
-            <p class="text-center">
-                Leave a Review below<br>
-
-                We appreciate your honest feedback!
-            </p>
-        </div>
-        <div class="col mx-auto form-group text-white">
-            <form action="{% url 'reviews' %}" method="post" id="forms">
-                {% csrf_token %}
-                <table>
-                    {{ form.as_table }}
-                </table>
-                <div class="mt-3 d-flex justify-content-center">
-                    <button class="btn btn-dark" type="submit" value="Submit">Submit</button>
-                </div>
-            </form>
-        </div>
-    </div>
     <div class="row mt-5">
         <div class="col col-md-3 reviews">
             <ul>
                 {% for review in object_list %}
                 <li>
-                    <h1 class="pt-3">Title: {{ review.title }}</h1><br>
+                    <h1 class="pt-3">Title: {{ review.title }}</h1>
+                    <a href="{% url 'update_review' review.pk %}">Edit</a>
+                    <a href="{% url 'delete_review' review.pk %}">Delete</a><br>
                     <a href="{% url 'reviews_detail' review.pk %}">{{ review.review }}</a><br>
                     {{ review.user }}<br>
                     {{ review.rate }} Stars<br>
@@ -37,6 +18,13 @@
                 </li>
                 {% endfor %}
             </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a href="{% url 'add_review' %}">
+                <h1 class="headings">Leave a Review</h1>
+            </a>
         </div>
     </div>
 </div>

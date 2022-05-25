@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid text-white full-page">
+    <div class="row">
+        <div class="col">
+            <h2 class="d-flex justify-content-center" id="headings">Get in Touch</h2>
+            <p class="text-center">
+                Leave a Review below<br>
+
+                We appreciate your honest feedback!
+            </p>
+        </div>
+        <div class="col mx-auto form-group text-white">
+            <form action="{% url 'add_review' %}" method="post" id="forms">
+                {% csrf_token %}
+                <table>
+                    {{ form.as_table }}
+                </table>
+                <div class="mt-3 d-flex justify-content-center">
+                    <button class="btn btn-dark" type="submit" value="Submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

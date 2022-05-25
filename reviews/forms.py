@@ -2,6 +2,7 @@
 from django import forms
 from .models import UserReviews
 
+
 class UserReviewForm(forms.ModelForm):
     """ meta data to generate contact us form """
     class Meta:
