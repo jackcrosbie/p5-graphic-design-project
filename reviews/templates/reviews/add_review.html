@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+{% if request.user.is_authenticated %}
 <div class="container-fluid text-white full-page">
     <div class="row">
         <div class="col">
@@ -24,4 +25,14 @@
         </div>
     </div>
 </div>
+{% else %}
+<div class="container-fluid full-page">
+    <div class="row">
+        <div class="col">
+            <h2>You are not logged in!<br>
+                Please go <a href="{% url 'account_login' %}">HERE</a>to login</h2>
+        </div>
+    </div>
+</div>
+{% endif %}
 {% endblock %}
