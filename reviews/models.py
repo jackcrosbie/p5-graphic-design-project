@@ -12,6 +12,7 @@ RATINGS = (
 
 
 class UserReviews(models.Model):
+    title = models.CharField(max_length=50, blank=True)
     review = models.TextField(max_length=1000)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     rate = models.IntegerField(choices=RATINGS, blank=True)

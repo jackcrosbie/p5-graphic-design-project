@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col text-white">
+        {{ object.title }}
+        {{ object.user }}
+        {{ object.review }}
+        {{ object.rate }}
+        {{ object.created_at }}
+    </div>
+</div>
+
+{% endblock %}

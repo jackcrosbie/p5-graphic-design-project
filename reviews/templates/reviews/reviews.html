@@ -5,12 +5,12 @@
 <div class="container-fluid text-white full-page">
     <div class="row">
         <div class="col">
-            <h2 class="d-flex justify-content-center" id="headings">Get in Touch</h1>
-                <p class="text-center">
-                    Leave a Review below<br>
+            <h2 class="d-flex justify-content-center" id="headings">Get in Touch</h2>
+            <p class="text-center">
+                Leave a Review below<br>
 
-                    We appreciate your honest feedback!
-                </p>
+                We appreciate your honest feedback!
+            </p>
         </div>
         <div class="col mx-auto form-group text-white">
             <form action="{% url 'reviews' %}" method="post" id="forms">
@@ -28,8 +28,9 @@
         <div class="col">
             <ul>
                 {% for review in object_list %}
-                <li>{{ review.user }}
-                    {{ review.review }}
+                <li>{{ review.title }}
+                    <a href="{% url 'reviews_detail' review.pk %}">{{ review.review }}</a>
+                    {{ review.user }}
                     {{ review.rate }}
                     {{ review.created_at }}</li>
                 {% endfor %}

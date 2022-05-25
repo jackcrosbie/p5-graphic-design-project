@@ -8,5 +8,5 @@ class ReviewForm(forms.ModelForm):
         """ form model, fields and widgets used"""
         model = UserReviews
         fields = [
-            'user', 'review', 'rate'
+            'title', 'user', 'review', 'rate'
             ]
