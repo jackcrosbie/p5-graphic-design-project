@@ -72,6 +72,12 @@ h4>a {
     --animate-duration: 2.5s;
 }
 
+/* ------------------------- form elements */
+
+.form-buttons {
+    margin-left: 15em;
+}
+
 /* ------------------------- bootstrap image carousel */
 
 .carousel-inner img {
