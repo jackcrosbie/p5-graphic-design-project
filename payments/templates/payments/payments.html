@@ -7,14 +7,16 @@
 
 
 {% block content %}
-<div class="container-fuid full-page text-white" id="payment-card">
-    <div class="row">
-        <div class="col col-md-6 offset-2">
+<div class="container-fuid full-page text-white">
+    <div class=" row h-75">
+        <div class="col col-md-6 offset-2 mt-5" id="payment-card">
+            <h1>Make a Payment</h1>
             <form action="{% url 'charge' %}" method="post" id="payment-form">
                 {% csrf_token %}
                 <div class="form-field-12">
-                    <label for="amount">Choose Amount:</label>
-                    <br>
+                    <label for="amount">
+                        <h3>Choose Amount:</h3>
+                    </label>
                     <br>
                     <select required name="amount" id="amount">
                         <option selected value="100">€100 - Deposit for a small job</option>
@@ -22,21 +24,29 @@
                         <option value="500">€500 - Deposit for a big job</option>
                     </select>
                 </div>
-                <input required type="text" name="name" placeholder="Name:">
-                <input required type="email" name="email" placeholder="Email:">
-                <div class="form-row">
-                    <label for="card-element">
-                        Credit or debit card
-                    </label>
-                    <div id="card-element">
-
-                    </div>
-                    <div class="card-errors" role="alert"></div>
+                <div class="form-fields">
+                    <input required type="text" name="name" placeholder="Name:">
+                    <input required type="email" name="email" placeholder="Email:">
                 </div>
-                <button>Submit Payment</button>
+                <br>
+                <br>
+                <div class="form-row">
+                    <div>
+                        <label for="card-element">
+                            <h2>Credit or debit card</h2>
+                        </label>
+                    </div>
+                </div>
+                <div id="card-element">
+
+                </div>
+                <div class="card-errors" role="alert"></div>
+
+                <button class="btn btn-dark form-buttons mt-5 p-3">Submit Payment</button>
             </form>
         </div>
     </div>
+</div>
 </div>
 {% endblock %}
 

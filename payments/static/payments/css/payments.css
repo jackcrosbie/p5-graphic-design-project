@@ -36,6 +36,23 @@
 
 #payment-card {
     width: 50%;
-    background-color: white;
+    background: #061D25;
+    opacity: .9;
     justify-content: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.form-fields {
+    padding-top: 2em;
+    width: 100%;
+}
+
+.form-fields>input {
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 50%;
+}
+
+h2 {
+    width: 100%;
 }
