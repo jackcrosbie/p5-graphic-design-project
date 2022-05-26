@@ -7,25 +7,41 @@
 
 
 {% block content %}
-<div class="container-fuid full-page text-white">
-    <form action="{% url 'charge' %}" method="post" id="payment-form">
-        {% csrf_token %}
-        <div class="form-row">
-            <label for="card-element">
-                Credit or debit card
-            </label>
-            <div id="card-element">
+<div class="container-fuid full-page text-white" id="payment-card">
+    <div class="row">
+        <div class="col col-md-6 offset-2">
+            <form action="{% url 'charge' %}" method="post" id="payment-form">
+                {% csrf_token %}
+                <div class="form-field-12">
+                    <label for="amount">Choose Amount:</label>
+                    <br>
+                    <br>
+                    <select required name="amount" id="amount">
+                        <option selected value="100">€100 - Deposit for a small job</option>
+                        <option value="200">€200 - Deposit for an urgent fix</option>
+                        <option value="500">€500 - Deposit for a big job</option>
+                    </select>
+                </div>
+                <input required type="text" name="name" placeholder="Name:">
+                <input required type="email" name="email" placeholder="Email:">
+                <div class="form-row">
+                    <label for="card-element">
+                        Credit or debit card
+                    </label>
+                    <div id="card-element">
 
-            </div>
-            <div class="card-errors" role="alert"></div>
+                    </div>
+                    <div class="card-errors" role="alert"></div>
+                </div>
+                <button>Submit Payment</button>
+            </form>
         </div>
-        <button>Submit Payment</button>
-    </form>
+    </div>
 </div>
 {% endblock %}
 
 {% block postloadjs %}
-
+{{ block.super }}
 {{ stripe_public_key|json_script:"id_stripe_public_key" }}
 {{ client_secret|json_script:"id_client_secret" }}
 <!-- script for stripe js added to stripe_elements.js -->

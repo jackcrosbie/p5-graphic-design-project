@@ -31,5 +31,11 @@
 }
 
 #card-element {
+    width: 75%;
+}
+
+#payment-card {
     width: 50%;
+    background-color: white;
+    justify-content: center;
 }
