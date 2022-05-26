@@ -1,7 +1,6 @@
 """ imports from django, models.py and forms.py """
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponseRedirect
 from django.http import JsonResponse
-from django.urls import reverse
 from django.views.generic.edit import CreateView
 from django.conf import settings
 import stripe
@@ -36,7 +35,7 @@ def charge(request):
     if request.method == 'POST':
         print('Data:', request.POST)
 
-    return render(reverse('success', args=[amount]))
+    return HttpResponseRedirect(reverse('success', args=[amount]))
 
 
 def successMsg(request, args):
