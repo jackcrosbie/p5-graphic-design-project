@@ -8,5 +8,5 @@ urlpatterns = [
     path('payments/', views.payments, name='payments'),
     path('quotes/', QuotesFormView.as_view(), name='quotes'),
     path('charge/', views.charge, name="charge"),
-    path('success/<str:args>/', views.successMessage, name="success"),
+    path('success/<str:args>/', views.successMsg, name="success"),
 ]

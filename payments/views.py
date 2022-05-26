@@ -1,12 +1,18 @@
 """ imports from django, models.py and forms.py """
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
+from django.http import JsonResponse
 from django.urls import reverse
 from django.views.generic.edit import CreateView
+from django.conf import settings
+import stripe
+
+import os
+
 from .models import Quotes
 from .forms import QuotesForm
 
+stripe.api_key = "sk_test_51Kdc2gEQtc7mNL2U0oEWtxrMRkHHxEmI5qC3K3ZnhiZw6EKatXTPIhREahO2hcwz1HBbW1lBgYLjXqeu7mClVImQ000gnUdZsy"
 
-# Create your views here.
 class QuotesFormView(CreateView):
     """ view for generating the contact form """
     model = Quotes()
@@ -25,14 +31,14 @@ def about(request):
     return render(request, 'payments/quotes.html')
 
 
-def charge(request):
+def charge(request):  
     amount = 5
     if request.method == 'POST':
         print('Data:', request.POST)
 
-        return redirect (reverse('success', args=[amount]))
+    return render(reverse('success', args=[amount]))
 
 
-def successMessage(request, args):
+def successMsg(request, args):
     amount = args
     return render(request, 'payments/payment_success.html', {'amount': amount})
