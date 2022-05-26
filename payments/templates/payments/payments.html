@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'payments/css/payments.css' %}">
+{% endblock %}
+
 {% block content %}
 <form actions="{% url 'charge' %}" method="POST" id="payment-form">
     <div class="form-row">
