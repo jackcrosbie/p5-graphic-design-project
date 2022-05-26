@@ -10,7 +10,7 @@ import os
 from .models import Quotes
 from .forms import QuotesForm
 
-stripe.api_key = "sk_test_51Kdc2gEQtc7mNL2U0oEWtxrMRkHHxEmI5qC3K3ZnhiZw6EKatXTPIhREahO2hcwz1HBbW1lBgYLjXqeu7mClVImQ000gnUdZsy"
+stripe.api_key = os.environ.get('STRIPE_SECRET_KEY', '')
 
 class QuotesFormView(CreateView):
     """ view for generating the contact form """
