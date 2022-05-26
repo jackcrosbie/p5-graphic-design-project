@@ -9,5 +9,10 @@ class UserReviewForm(forms.ModelForm):
         """ form model, fields and widgets used"""
         model = UserReviews
         fields = [
-            'title', 'user', 'review', 'rate'
+            'title', 'review', 'rate'
             ]
+
+    def form_valid(self, form):
+        # if form is valid return to discussion
+        form.instance.user = self.request.user
+        return super().form_valid(form)
