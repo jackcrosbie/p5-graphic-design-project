@@ -36,4 +36,4 @@ class Quotes(models.Model):
         verbose_name_plural = "Quotes"
 
     def __str__(self):
-        return self.quote_id
+        return self.name
