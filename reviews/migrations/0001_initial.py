@@ -21,7 +21,6 @@ class Migration(migrations.Migration):
                 ('comment', models.CharField(max_length=250)),
                 ('rate', models.IntegerField(default=0)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]

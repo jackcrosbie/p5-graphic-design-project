@@ -12,11 +12,3 @@ class Migration(migrations.Migration):
         ('reviews', '0007_alter_userreviews_user'),
     ]
 
-    operations = [
-        migrations.AlterField(
-            model_name='userreviews',
-            name='user',
-            field=models.ForeignKey(default=7, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
-            preserve_default=False,
-        ),
-    ]

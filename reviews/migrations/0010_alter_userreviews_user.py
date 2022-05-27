@@ -11,12 +11,3 @@ class Migration(migrations.Migration):
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
         ('reviews', '0009_alter_userreviews_user'),
     ]
-
-    operations = [
-        migrations.AlterField(
-            model_name='userreviews',
-            name='user',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
-            preserve_default=False,
-        ),
-    ]
