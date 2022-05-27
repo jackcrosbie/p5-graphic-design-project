@@ -1,1 +1,29 @@
 {% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid text-white full-page">
+    <div class="row">
+        <div class="col">
+            <h2 class="d-flex justify-content-center" id="headings">Sign up to our Newsletter</h1>
+                <p class="text-center background-color">
+                    By signing up to our newsletter we'll keep you up to date on the goings on of JaCros Design<br>
+                    On top of that we'll keep ye aprised of all the latest news, changes and happenings in the world of coding!
+
+                    Our newletter will also give you news on competitions, holiday discounts and give you a feel for our busy we are.
+                    We hope to be invading an inbox here you soon!!
+                </p>
+        </div>
+        <div class="col mx-auto form-group text-white">
+            <form action="{% url 'contact' %}" method="post" id="forms">
+                {% csrf_token %}
+                <table>
+                    {{ form.as_table }}
+                </table>
+                <div class="mt-3 d-flex form-buttons">
+                    <button class="btn btn-dark" type="submit" value="Submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

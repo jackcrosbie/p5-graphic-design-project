@@ -5,5 +5,5 @@ from .views import ContactUsFormView, NewsletterFormView
 
 urlpatterns = [
     path('', ContactUsFormView.as_view(), name='contact'),
-    path('', NewsletterFormView.as_view(), name='newsletter'),
+    path('newsletter/', NewsletterFormView.as_view(), name='newsletter'),
 ]
