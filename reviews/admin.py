@@ -3,4 +3,3 @@ from .models import UserReviews
 
 # Register your models here.
 admin.site.register(UserReviews)
-
