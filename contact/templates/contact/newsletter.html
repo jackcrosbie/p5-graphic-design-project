@@ -14,7 +14,7 @@
                 </p>
         </div>
         <div class="col mx-auto form-group text-white">
-            <form action="{% url 'contact' %}" method="post" id="forms">
+            <form action="{% url 'newsletter' %}" method="post" id="forms">
                 {% csrf_token %}
                 <table>
                     {{ form.as_table }}

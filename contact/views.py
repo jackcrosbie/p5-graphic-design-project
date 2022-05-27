@@ -18,4 +18,4 @@ class NewsletterFormView(CreateView):
     model = Newsletter
     template_name = "contact/newsletter.html"
     form_class = NewsletterForm
-    success_url = 'contact/newsletter.html'
+    success_url = '/'
