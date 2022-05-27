@@ -76,9 +76,12 @@
                     {% endif %}
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Contact Us</a>
+                <div class="dropdown-menu">
+                    <a href="{% url 'contact' %}" class="dropdown-item">Get in Touch</a>
+                    <a href="{% url 'newsletter' %}" class="dropdown-item">Newsletter</a>
+                </div>
             <li class="nav-item">
                 <a class="nav-link active" href="{% url 'reviews' %}">Reviews</a>
             </li>
