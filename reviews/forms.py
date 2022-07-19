@@ -11,8 +11,3 @@ class UserReviewForm(forms.ModelForm):
         fields = [
             'title', 'review', 'rate'
             ]
-
-    def form_valid(self, form):
-        # if form is valid return to discussion
-        form.instance.user = self.request.user
-        return super().form_valid(form)

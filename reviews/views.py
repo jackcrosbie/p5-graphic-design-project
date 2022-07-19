@@ -22,8 +22,15 @@ class ReviewFormView(CreateView):
     """ view for review form """
     model = UserReviews
     template_name = "reviews/add_review.html"
-    form_class = UserReviewForm
     success_url = reverse_lazy('reviews')
+    fields = [
+            'title', 'review', 'rate'
+            ]
+
+    def form_valid(self, form):
+        # if form is valid return to discussion
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 
 class UpdateReviewView(UpdateView):
