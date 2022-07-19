@@ -118,7 +118,7 @@ h4>a {
 .footer {
     background: #061D25;
     width: 100%;
-    position: absolute;
+    position: fixed;
 }
 
 .footer a {
