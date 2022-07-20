@@ -4,7 +4,7 @@
 {% block content %}
 <div class="container-fluid text-white">
     <div class="row mt-5">
-        {% for review in reviews %}
+        {% for review in userreviews_list %}
         <div class="col col-md-3 reviews">
             <h1 class="pt-3">Title: {{ review.title }}</h1>
             {% if request.user.is_authenticated %}
@@ -25,6 +25,8 @@
         <div class="col">
             <a href="{% url 'add_review' %}">
                 <h1 class="headings">Leave a Review</h1>
+                <hr>
+                <h2>To help improve our service please leave an honest review</h2>
             </a>
         </div>
     </div>

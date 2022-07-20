@@ -37,6 +37,7 @@ class UpdateReviewView(UpdateView):
     """ view for updating review form """
     model = UserReviews
     template_name = "reviews/update_review.html"
+    success_url = reverse_lazy('reviews')
     form_class = UserReviewForm
 
 
