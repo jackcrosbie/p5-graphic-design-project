@@ -6,16 +6,21 @@
     <div class="row mt-5">
         {% for review in userreviews_list %}
         <div class="col col-md-3 reviews">
-            <h1 class="pt-3">Title: {{ review.title }}</h1>
+            <h1 class="pt-3 font-weight-bold">Title: {{ review.title }}</h1>
             {% if request.user.is_authenticated %}
             {% if user.id == review.user.id %}
-            <a href="{% url 'update_review' review.pk %}">Edit</a>
-            <a href="{% url 'delete_review' review.pk %}">Delete</a><br>
+            <!-- edit/delete buttons for reviews. Available if user id matches -->
+            <a href="{% url 'update_review' review.pk %}" class="font-italic btn btn-success">Edit</a>
+            <a href="{% url 'delete_review' review.pk %}" class="font-italic btn btn-danger">Delete</a>
+            <br>
             {% endif %}
             {% endif %}
             <a href="{% url 'reviews_detail' review.pk %}">{{ review.review|slice:":50" }}</a><br>
             {{ review.user }}<br>
-            {{ review.rate }} Stars<br>
+            <div class="badge badge-primary text-wrap" style="width: 6rem;">
+                {{ review.rate }} Stars
+            </div>
+            <br>
             {{ review.created_at }}
 
         </div>
