@@ -15,9 +15,9 @@
             <br>
             {% endif %}
             {% endif %}
-            <a href="{% url 'reviews_detail' review.pk %}">{{ review.review|slice:":50" }}</a><br>
+            <a href="{% url 'reviews_detail' review.pk %}" class="lead">{{ review.review|slice:":30" }}....</a><br>
             {{ review.user }}<br>
-            <div class="badge badge-primary text-wrap" style="width: 6rem;">
+            <div class="badge badge-warning text-wrap" style="width: 6rem;">
                 {{ review.rate }} Stars
             </div>
             <br>
