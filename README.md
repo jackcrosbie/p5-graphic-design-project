@@ -126,7 +126,7 @@ The user name and date of creation are automatically attached to the review. Aft
 
 ### Skeleton
 
-[Wireframes for this project](assets/documents/p4-wireframes.pdf)
+[Wireframes for this project]
 
 My wireframes were created using Balsamiq and represent the simplicity I was going for.
 
@@ -135,6 +135,8 @@ I tried to keep as close to my wireframes as possible when creating the various 
 
 ### Surface
 
+(BACKGROUND IMG)
+(BLUE BLACK COLOUR WITH WHITE TEXT IMG)
 
 ## Technologies
 
@@ -147,9 +149,9 @@ Python is the core programming language used to write all of the code in this ap
 - Bootstrap:
 Used for creating responsive design.
 - Stripe:
-
-- W3S:
-
+Stipe offers payment processing software and application programming interfaces (APIs) for e-commerce websites and mobile applications.
+- AWS:
+I used Amazon AWS S3 to store all of my media files.
 - Google Fonts:
 Used to obtain the fonts linked in the header, fonts used were Raleway and Lobster
 - Font Awesome:
@@ -236,28 +238,62 @@ By using bootstrap and toasts I was able to create login and logout success mess
 
 _As a User I want to be able to change my password so that i can do so if the need arises and keep my account/information safe_
 
-A user may want to change their password if they have either forgotten their original one or was worried their information had been compromised 
+A user may want to change their password if they have either forgotten their original one or was worried their information had been compromised.
+Through using Django-AllAuth the user has the ability to change their old password from the My Profile tab in the Members Area.
+
+(CHANGE PASSWORD IMG)
 
 _As a User I want to be able to contact the owner so that i can get specific information relevant to me_
 
+Through using the contact form in the contact app A user is able to get in contact to request whatever extra information they might require before making a decision. This is different to the quote form which will only deal with information regarding a specific job request. The contact form can be used for whatever information they might require be it information on my schedule, past projects I've worked on, references etc.
+
+(CONTACT FORM PHOTO)
 
 _As a User I want to see a professional looking homepage that will draw me in so that i can find out more information in an easy manner_
 
+By creating a simple landing page with a background image, animated logo and a navbar I feel i have created a nice looking homepage.
+The animated logo also acts as a link to the about page which gives the user more information on who I am and what I do. The text colour works well against the background of the navbar and the background image. This makes everything clear and easily readable for the user.
+
+(LANDING PAGE IMG)
 
 _As a User I want to be able to easily navigate the site so that i can easily view all the content_
 
+Through my navbar I feel I have make the website easy to navigate. The navbar is split into 6 sections Home, About, Payments, Members Area, Contact Us and Reviews.
+Members Area, Payments and Contact Us are all dropdown links with additional relevant options e.g Payments is broken down into Make a Payment and Get a Quote.
+I feel this was the most intuitive way to keep my website navigational while not overloading pages with information.
 
-_As a User I want a stylish looking well thoughout website so that i can find everything i want and access information easily_
+(NAVBAR IMG)
+(NAVBAR DROPDOWN MENU IMG)
 
 
+## Marketing
 
+Through asking myself various questions, such as "what age profile would the users of the website be?", "what types of social media sites would they use?" and "What are the user's need?", along with my user stories and doing some research of other graphic design websites, I was able to ascertain that Facebook and Instagram would be my best methods of social media marketing. To start this process and to test out it's effective this I created a Facebook Business Page. 
 
+(FACEBOOK PAGE IMG)
+
+This page could be updated with news, promotions or any other information and would enable me to reach a wider audience through Facebook.
+
+Website users also have the option to sign up to the newsletter for further news, information and testimonies further increasing the brand awareness of JaCros Design.
+
+(NEWSLETTER SIGNUP IMG)
 
 ## Testing
 
 ### Manual Testing
 
+#### Homepage Logo
+
+To test if the homepage logo was working as a link to the about page and that the animation attached to it was working as expected I reloaded my homepage.
+I watched to make sure the bounce animation took effect. I saw this was working and then proceeded to click on the logo as it is meant to bring me to the About page. When i clicked the logo it took me to the about page as intended.
+
+(HOMEPAGE LOGO IMG)
+
 #### NavBar
+
+To begin my testing I checked to ensure all the links on the navbar worked. I did this but clicking each link and ensuring it brought me to the desired location.
+Each of the links on the navbar brought me to the correct page e.g the "reviews" link brought me to the reviews page as intended.
+After this I ensured you could move between each page and back without any errors. I went through the links one at a time and make sure you could access each of the rest of the pages without any errors, crashes or bugs. I was able to navigate fully through the website without any issues.
 
 
 #### Registration/Login/Logout
@@ -265,14 +301,18 @@ _As a User I want a stylish looking well thoughout website so that i can find ev
 After testing the navbar to ensure everything was working I then decided to test the allauth registration and login.
 I filled in the registration form and was able to create a new user. 
 
-![registration form](https://github.com/jackcrosbie/p4-restuarant-project/blob/main/assets/documents/images/registration-form.png?raw=true)
+![registration form]
 
 This all worked correctly and brought me to the relevant pages.
 After my registration was complete I then checked I could log in as the newly created user. This again all worked as hoped so I was able to move on.
 
 Next i tested the log out functionality was working. I clicked the log out button on the first navbar and was prompted to confirm I wanted to log out.
-After confirming I wanted to log out I was logged out and no longer had access to the accounts page. This meant I couldn't see, edit or delete reservations made.
+After confirming I wanted to log out I was logged out and no longer had access to the accounts page. This meant I couldn't see, edit or delete reviews made.
 This was the outcome I had hoped for.
+
+#### Payments Form
+
+#### Reviews
 
 
 ## Deployment
