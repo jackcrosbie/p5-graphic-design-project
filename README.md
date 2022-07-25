@@ -126,7 +126,7 @@ The user name and date of creation are automatically attached to the review. Aft
 
 ### Skeleton
 
-[Wireframes for this project]
+[Wireframes for this project](assets/documents/p5-wireframes.pdf)
 
 My wireframes were created using Balsamiq and represent the simplicity I was going for.
 
