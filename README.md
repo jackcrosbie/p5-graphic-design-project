@@ -146,6 +146,10 @@ Django is the framework that has been used to build the over project and its app
 Python is the core programming language used to write all of the code in this application to make it fully functional.
 - Bootstrap:
 Used for creating responsive design.
+- Stripe:
+
+- W3S:
+
 - Google Fonts:
 Used to obtain the fonts linked in the header, fonts used were Raleway and Lobster
 - Font Awesome:
@@ -164,10 +168,6 @@ Used to deploy my application..
 Used to test my code for any issues or errors.
 - Unicorn Revealer:
 Used to detect overflow of elements, which allowed me to quickly debug any issues.
-- Coloors:
-Used to create a colour palette for the design.
-- Cloudinary:
-Used to store all of my static files and images.
 - W3C Markup Validation Service:
 Used to validate all HTML code written and used in this webpage.
 - W3C CSS Validation Service:
@@ -179,6 +179,75 @@ I have used Heroku's PostgreSQL relational database in deployment to store the d
 
 **Features Implemented**
 
+_As a User I want a stylish looking well thoughout website so that i can find everything i want and access information easily_
+
+By providing a well designed and easily navigated website it improves the user satisfaction while using the website and also increases the likelyhood of them revisiting it. To make a well laid out website which was easily navigational I used general CSS styling and also Bootstrap for a more solid design.
+I use a background image consistent throughout the entire website to keep each page uniform. With the background image taking up the entire background of the pages I only need to pick a couple colours which were for background of the navbar, background for text areas and colour for the text itself.
+I opted for a black blue colour for the background of the navbar and text areas. This stood out against the green background without being too much of a contrast. For the text colour I simply went for a white colour as it stood out nicely against the green and black blue colours.
+On the homepage I have used animate.css to create a bouncing effect on the logo 'JaCros Graphic Design'.
+
+The website is broken down into the main componenets and each one of these has it's own page. They are all clearly marked and easily navigational to through the navbars. Every step is clearly marked and the styles are uniform through, like all the buttons are styled the same using bootstrap for a sense of familiarity throughout for the user. Through my choice of colours, images, use of bootstrap, HTML and CSS i feel the website i have created is both easy to navigate as well as stylish.
+
+(LANDING PAGE IMG)
+
+_As a Site Admin I want to be able to login to see orders so that i can maintain and manage customer purchases_
+
+By registering a superuser who can access the admin panel It enables me to logon and maintain customer reviews, quotes, see whose signed up to the newsletter and people who have created profile and the relevant information associated with that profile (email address, username etc).
+
+The management of payments will be done via logging onto my Stripe account. Here it keeps a summary of payments received with information such as amount of payment, name and email address of the person who made the payment.
+
+_As a User I want to be able to register so that i can log in when i return in future_
+
+A user will be able to register through the register button on the site, dropdown selection from the members link in the navbar. Once they fill out the registration form they will then be about to log in and log out in future. Authenication is provided by django AllAuth which keeps users and their information safe and secure.
+
+(REGISTRATION FORM IMG)
+
+_As a User I want to be able to log in and log out so that i can keep my information safe and see any products/services have i purchased_
+
+If a user is registered they need the ability to login and logout of the website. This is a safety issue and stops someone else being able to use their account or access their information, if they were continually logged in. The login and logout ability was created through Django AllAuth.
+
+_As a User I want to be able to leave, update, delete and read reviews so that i read about previous customers experiences and leave my own experiences for other consumers_
+
+Once a user is logged in they can choose to leave a review about their customer experience and satisfaction level of the job provided. They can rate the service they got from 1 - 5. This enables future potential customers to get an understanding of the level of work I can provide for them. These reviews can be read by any user of the website regardless of whether they are a registered user or not. You have to be registered and logged in to leave a review though.
+After leaving a review the user has the option to go back and edit or delete the review if they chose. Only the user who left the review can edit or delete that said review. This is stop users being able to edit or delete other users reviews. The edit/delete buttons only appear if the user id of the logged in user matches the user id of the user who left the review in the first instance.
+
+(REVIEWS PAGE IMG)
+
+_As a User I want to be able to pay for good and services safely and securely so that i can not worry about my information being stolen_
+
+Using Stripe I was able to create a simple payment form which enables users to pay a set deposit dependant on the size of the job.
+After setting up a Stripe account and then creating custom JavaScript and views to deal with the Stripe payment I now have a fully functioning, secure payments form on the site. The information is sent to my Stripe account and stored safely/securely there. A payment success message is shown once a payment has been successfully processed.
+
+(STRIPE PAYMENT FORM/ STRIPE ACCOUNT TEST EXAMPLE)
+
+_As a User I want to be able to request a quote so that i can get an understanding of costs before making a decision to buy_
+
+Through using the quote form a user is able to request a quote for a job while providing a more indepth description of the job needed. A unqiue quote id number is generated and sent to the admin panel. This is for ease of managing various quotes and gives a distinctive way of differentiating  between all the quotes/quote request. The rest of the information send by the form is straight forward and includes name, phone number, email and text area to input the information needed for the job.
+
+(QUOTE FORM IMG)
+
+_As a User I want to see messages when logging in and logging out so that i can be sure the action was undertaken_
+
+When user are logging in and logging out it is beneficial for them to see a message stating the action has occured. Again this is a safety issue and just confirms the action was undertaken so the user can navigate away from the website knowing they have been logged out. This helps prevents users staying logged in if an error occurs as the user will be alerted.
+
+By using bootstrap and toasts I was able to create login and logout success messages 
+
+(LOGIN SUCCESSFUL MESSAGE IMG)
+
+_As a User I want to be able to change my password so that i can do so if the need arises and keep my account/information safe_
+
+A user may want to change their password if they have either forgotten their original one or was worried their information had been compromised 
+
+_As a User I want to be able to contact the owner so that i can get specific information relevant to me_
+
+
+_As a User I want to see a professional looking homepage that will draw me in so that i can find out more information in an easy manner_
+
+
+_As a User I want to be able to easily navigate the site so that i can easily view all the content_
+
+
+_As a User I want a stylish looking well thoughout website so that i can find everything i want and access information easily_
 
 
 
