@@ -135,8 +135,8 @@ I tried to keep as close to my wireframes as possible when creating the various 
 
 ### Surface
 
-(BACKGROUND IMG)
-(BLUE BLACK COLOUR WITH WHITE TEXT IMG)
+![background-image](/workspace/p5-graphic-design-project/assets/images/cool-background.png)
+![navbar](assets/images/navbar.PNG)
 
 ## Technologies
 
@@ -190,7 +190,7 @@ On the homepage I have used animate.css to create a bouncing effect on the logo 
 
 The website is broken down into the main componenets and each one of these has it's own page. They are all clearly marked and easily navigational to through the navbars. Every step is clearly marked and the styles are uniform through, like all the buttons are styled the same using bootstrap for a sense of familiarity throughout for the user. Through my choice of colours, images, use of bootstrap, HTML and CSS i feel the website i have created is both easy to navigate as well as stylish.
 
-(LANDING PAGE IMG)
+![homepage](assets/images/homepage.PNG)
 
 _As a Site Admin I want to be able to login to see orders so that i can maintain and manage customer purchases_
 
@@ -202,7 +202,7 @@ _As a User I want to be able to register so that i can log in when i return in f
 
 A user will be able to register through the register button on the site, dropdown selection from the members link in the navbar. Once they fill out the registration form they will then be about to log in and log out in future. Authenication is provided by django AllAuth which keeps users and their information safe and secure.
 
-(REGISTRATION FORM IMG)
+![registration-form](assets/images/signup-form.PNG)
 
 _As a User I want to be able to log in and log out so that i can keep my information safe and see any products/services have i purchased_
 
@@ -213,20 +213,20 @@ _As a User I want to be able to leave, update, delete and read reviews so that i
 Once a user is logged in they can choose to leave a review about their customer experience and satisfaction level of the job provided. They can rate the service they got from 1 - 5. This enables future potential customers to get an understanding of the level of work I can provide for them. These reviews can be read by any user of the website regardless of whether they are a registered user or not. You have to be registered and logged in to leave a review though.
 After leaving a review the user has the option to go back and edit or delete the review if they chose. Only the user who left the review can edit or delete that said review. This is stop users being able to edit or delete other users reviews. The edit/delete buttons only appear if the user id of the logged in user matches the user id of the user who left the review in the first instance.
 
-(REVIEWS PAGE IMG)
+![reviews-page](assets/images/sample-reviews.PNG)
 
 _As a User I want to be able to pay for good and services safely and securely so that i can not worry about my information being stolen_
 
 Using Stripe I was able to create a simple payment form which enables users to pay a set deposit dependant on the size of the job.
 After setting up a Stripe account and then creating custom JavaScript and views to deal with the Stripe payment I now have a fully functioning, secure payments form on the site. The information is sent to my Stripe account and stored safely/securely there. A payment success message is shown once a payment has been successfully processed.
 
-(STRIPE PAYMENT FORM/ STRIPE ACCOUNT TEST EXAMPLE)
+![stripe-payment-form](assets/images/payment-form.PNG)
 
 _As a User I want to be able to request a quote so that i can get an understanding of costs before making a decision to buy_
 
 Through using the quote form a user is able to request a quote for a job while providing a more indepth description of the job needed. A unqiue quote id number is generated and sent to the admin panel. This is for ease of managing various quotes and gives a distinctive way of differentiating  between all the quotes/quote request. The rest of the information send by the form is straight forward and includes name, phone number, email and text area to input the information needed for the job.
 
-(QUOTE FORM IMG)
+![quote-form](assets/images/quote-form.PNG)
 
 _As a User I want to see messages when logging in and logging out so that i can be sure the action was undertaken_
 
@@ -254,7 +254,7 @@ _As a User I want to see a professional looking homepage that will draw me in so
 By creating a simple landing page with a background image, animated logo and a navbar I feel i have created a nice looking homepage.
 The animated logo also acts as a link to the about page which gives the user more information on who I am and what I do. The text colour works well against the background of the navbar and the background image. This makes everything clear and easily readable for the user.
 
-(LANDING PAGE IMG)
+![homepage](assets/images/homepage.PNG)
 
 _As a User I want to be able to easily navigate the site so that i can easily view all the content_
 
@@ -262,7 +262,7 @@ Through my navbar I feel I have make the website easy to navigate. The navbar is
 Members Area, Payments and Contact Us are all dropdown links with additional relevant options e.g Payments is broken down into Make a Payment and Get a Quote.
 I feel this was the most intuitive way to keep my website navigational while not overloading pages with information.
 
-(NAVBAR IMG)
+![navbar](assets/images/navbar.PNG)
 (NAVBAR DROPDOWN MENU IMG)
 
 
@@ -301,7 +301,7 @@ After this I ensured you could move between each page and back without any error
 After testing the navbar to ensure everything was working I then decided to test the allauth registration and login.
 I filled in the registration form and was able to create a new user. 
 
-![registration form]
+![registration-form](assets/images/signup-form.PNG)
 
 This all worked correctly and brought me to the relevant pages.
 After my registration was complete I then checked I could log in as the newly created user. This again all worked as hoped so I was able to move on.
