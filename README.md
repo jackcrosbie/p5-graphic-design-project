@@ -1,5 +1,7 @@
 # Jacros Graphic Design
 
+![homepage](assets/images/homepage.PNG)
+
 
 ## Contents
 - [Introduction](#introduction)
@@ -135,7 +137,7 @@ I tried to keep as close to my wireframes as possible when creating the various 
 
 ### Surface
 
-![background-image](/workspace/p5-graphic-design-project/assets/images/cool-background.png)
+![background-image](assets/images/cool-background.png)
 ![navbar](assets/images/navbar.PNG)
 
 ## Technologies
