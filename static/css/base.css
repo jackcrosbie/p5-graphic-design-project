@@ -129,7 +129,7 @@ h4>a {
 
 /* ------------------------- footer */
 
-.footer {
+.footer-style {
     background: #061D25;
     position: fixed;
     height: 50px;
@@ -137,13 +137,13 @@ h4>a {
     width: 100%;
 }
 
-.footer a {
+.footer-style a {
     color: #70726F;
     font-size: 30px;
     padding-left: 20px;
     transition: all .5s ease;
 }
 
-.footer a:hover {
+.footer-style a:hover {
     color: white;
 }
