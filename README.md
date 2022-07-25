@@ -125,6 +125,7 @@ In order to leave a review you must be registered and logged in.
 The reviews app has a custom model which required users to input a title, the body of the review itself and then a rating between 1 and 5.
 The user name and date of creation are automatically attached to the review. After a review has been left the user can edit or delete a review. They can only do this if the user id of the logged in user matched the user id of the user who created the review. This is to prevent other users deleting reviews they did not write. By enabling the user to be able to edit and delete their reviews after they have created them it gives the reviews app full CRUD functionality.
 
+![apps](assets/images/apps.PNG)
 
 ### Skeleton
 
@@ -236,20 +237,20 @@ When user are logging in and logging out it is beneficial for them to see a mess
 
 By using bootstrap and toasts I was able to create login and logout success messages 
 
-(LOGIN SUCCESSFUL MESSAGE IMG)
+![logout-successful](assets/images/success-message.PNG)
 
 _As a User I want to be able to change my password so that i can do so if the need arises and keep my account/information safe_
 
 A user may want to change their password if they have either forgotten their original one or was worried their information had been compromised.
 Through using Django-AllAuth the user has the ability to change their old password from the My Profile tab in the Members Area.
 
-(CHANGE PASSWORD IMG)
+![change-password](assets/images/change-password.PNG)
 
 _As a User I want to be able to contact the owner so that i can get specific information relevant to me_
 
 Through using the contact form in the contact app A user is able to get in contact to request whatever extra information they might require before making a decision. This is different to the quote form which will only deal with information regarding a specific job request. The contact form can be used for whatever information they might require be it information on my schedule, past projects I've worked on, references etc.
 
-(CONTACT FORM PHOTO)
+![contact-form](assets/images/contact-form.PNG)
 
 _As a User I want to see a professional looking homepage that will draw me in so that i can find out more information in an easy manner_
 
@@ -265,7 +266,7 @@ Members Area, Payments and Contact Us are all dropdown links with additional rel
 I feel this was the most intuitive way to keep my website navigational while not overloading pages with information.
 
 ![navbar](assets/images/navbar.PNG)
-(NAVBAR DROPDOWN MENU IMG)
+![navbar-dropdown](assets/images/navbar-dropdown.PNG)
 
 
 ## Marketing
@@ -278,7 +279,7 @@ This page could be updated with news, promotions or any other information and wo
 
 Website users also have the option to sign up to the newsletter for further news, information and testimonies further increasing the brand awareness of JaCros Design.
 
-(NEWSLETTER SIGNUP IMG)
+![newsletter-signup](assets/images/newsletter-form.PNG)
 
 ## Testing
 
@@ -289,7 +290,7 @@ Website users also have the option to sign up to the newsletter for further news
 To test if the homepage logo was working as a link to the about page and that the animation attached to it was working as expected I reloaded my homepage.
 I watched to make sure the bounce animation took effect. I saw this was working and then proceeded to click on the logo as it is meant to bring me to the About page. When i clicked the logo it took me to the about page as intended.
 
-(HOMEPAGE LOGO IMG)
+![homepage-logo](assets/images/homepage-logo.PNG)
 
 #### NavBar
 
