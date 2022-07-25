@@ -143,6 +143,6 @@ h4>a {
     transition: all .5s ease;
 }
 
-.footer a:hover {
+.footer-style a:hover {
     color: white;
 }
