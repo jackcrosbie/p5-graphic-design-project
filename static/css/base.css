@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    min-height: 100%;
+    height: 100%;
     background: url('/media/cool-background.png') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Roboto', sans-serif;
@@ -129,14 +129,14 @@ h4>a {
 
 /* ------------------------- footer */
 
-.footer {
+.footer-style {
     background: #061D25;
     width: 100%;
     height: 50px;
     bottom: 0;
 }
 
-.footer a {
+.footer-style a {
     color: #70726F;
     font-size: 30px;
     padding-left: 20px;
