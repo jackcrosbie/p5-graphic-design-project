@@ -272,7 +272,7 @@ I feel this was the most intuitive way to keep my website navigational while not
 
 Through asking myself various questions, such as "what age profile would the users of the website be?", "what types of social media sites would they use?" and "What are the user's need?", along with my user stories and doing some research of other graphic design websites, I was able to ascertain that Facebook and Instagram would be my best methods of social media marketing. To start this process and to test out it's effective this I created a Facebook Business Page. 
 
-![facebook-business-page](/workspace/p5-graphic-design-project/assets/images/facebook-business-page.PNG)
+![facebook-business-page](assets/images/facebook-business-page.PNG)
 
 This page could be updated with news, promotions or any other information and would enable me to reach a wider audience through Facebook.
 
