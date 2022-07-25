@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block content %}
 <h1>404 Page Not Found</h1>
 
-<h2>Click <a href="/">Here</a>to return home</h2>
+<h2>Click <a href="{% url 'home' %}">Here</a>to return home</h2>
+{% endblock %}
