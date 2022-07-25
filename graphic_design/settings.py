@@ -33,8 +33,8 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 #ALLOWED_HOSTS = ['jacros-graphic-design.herokuapp.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-jackcrosbie-p5graphicde-q9evymuj4sb.ws-eu54.gitpod.io', 'localhost:8000', 'https://jacros-graphic-design.herokuapp.com/']
-
+CSRF_TRUSTED_ORIGINS = ['https://8000-jackcrosbie-p5graphicde-q9evymuj4sb.ws-eu54.gitpod.io', 'localhost:8000']
+ALLOWED_HOSTS = ['https://jacros-graphic-design.herokuapp.com/']
 
 # Application definition
 
