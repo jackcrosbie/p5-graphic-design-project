@@ -129,16 +129,15 @@ h4>a {
 
 /* ------------------------- footer */
 
-.footer {
+footer {
     background: #061D25;
-    width: 100%;
+    position: fixed;
     height: 50px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
+    bottom: 0;
+    width: 100%;
 }
 
-.footer a {
+footer a {
     color: #70726F;
     font-size: 30px;
     padding-left: 20px;
