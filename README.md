@@ -1,4 +1,4 @@
-I# Jack's Bistro
+# Jacros Graphic Design
 
 
 ## Contents
@@ -13,12 +13,13 @@ I# Jack's Bistro
 
 
 ## Introduction
-
+My submission for my P5, e-commerce applications, Project. This is a website offering my services as a graphic designer.
+The website contains information about past projects I've worked on, a payment and quotes system, a review system where reviews can be edited and deleted by users and a newsletter sign up page. Information will be stored on a PostgreSQL database and will be able to be maintained and edited by the superuser.
 
 
 ### Demo
 
-https://jacksbistro.herokuapp.com/ - Live link to website!
+https://jacros-graphic-design.herokuapp.com/ - Live link to website!
 
 ## UX
 
@@ -28,12 +29,35 @@ Utilising UX design is essential these days to provide meaningful and relevant e
 
 **Vision**
 
-
+The vision of the website is to show users past projects I have worked on and also giving them an easy and safe way to pay for my services.
+By signing up to the newsletter users can stay uptodate with projects I'm working on and new skills I've acquired. Potential users can also read reviews left my previous customers to get a better understanding of what I can offer. 
 
 **Aims**
 
+1. Provide a stylish, easy to use and intuitive website.
+2. Implement a payment service, using Stripe, which is safe and easy to use.
+3. Create a contact form for information on jobs and requests from users.
+4. Provide users with information on past projects
+5. Enable users to Login/Logout, autofilling information when logged in to save time when leaving reviews or filling in quotes form.
+6. Allow users to create, edit and delete reviews they have left.
+7. Have a newsletter users can signup to to stay uptodate on jobs I'm working on and new skills I've acquired.
+
 
 **User Stories**
+
+- As a User I want a stylish looking well thoughout website so that i can find everything i want and access information easily
+- As a Site Admin I want to be able to login to see orders so that i can maintain and manage customer purchases
+- As a User I want to be able to log in and log out so that i can keep my information safe and see any products/services have i purchased
+- As a User I want to be able to leave, update, delete and read reviews so that i read about previous customers experiences and leave my own experiences for other consumers
+- As a User I want to be able to pay for good and services safely and securely so that i can not worry about my information being stolen
+- As a User I want to be able to register so that i can log in when i return in future
+- As a User I want to be able to request a quote so that i can get an understanding of costs before making a decision to buy
+- As a User I want to see messages when logging in and logging out so that i can be sure the action was undertaken
+- As a User I want to be able to change my password so that i can do so if the need arises and keep my account/information safe
+- As a User I want to be able to contact the owner so that i can get specific information relevant to me
+- As a User I want to see a professional looking homepage that will draw me in so that i can find out more information in an easy manner
+- As a User I want to be able to easily navigate the site so that i can easily view all the content
+- As a User I want a stylish looking well thoughout website so that i can find everything i want and access information easily
 
 
 
@@ -41,28 +65,63 @@ Utilising UX design is essential these days to provide meaningful and relevant e
 
 Based on my user stories these are the features I felt needed implementing:
 
+- Homepage/About page with information about who we are, what we do and previous projects worked on.
+- A navigation bar to take you to the pages on the site
+- Registration page so that customers could register
+- Payments/quotes page so users can request quotes or pay for services through Stripe payments.
+- Login and Logout, powered by Django AllAuth, so user could safely log in and out.
+- Contact Us page, with form, so customers with special requests could get in touch
+- A reviews page with full CRUD functionality
+- A newsletter signup page so users can stay uptodate with projects I'm working on 
+
 
 
 ### Structure
 
-
+The website is relatively simple in it's structure. Everything is clearly labeled and easily navigational so the user can get to what they need easily. All the major aspects of the website have their own page:
+- Landing page with an animated logo
+- About page to learn information about me
+- Payments section split into two pages, one for making a payment and another for getting a quote.
+- Members area for signing in or signing up and if signed in for seeing your account page or logging out.
+- Contact us section split into two pages, one for sending a contact form and another for signing up to a newsletter.
+- Reviews page for leaving, editing or deleting reviews.
+- Navbar on each page to allow for easy navigation through the website.
+- Footer containing social links at the bottom of each page
 
 ### Databases
 
+I have three apps that require databases. They are contact app, payments app and reviews app.
+
+These apps have customs models and forms to enable users to get in contact, sign up for a newletter, get a quote, make a payment and then full CRUD functionality on the reviews section.
+
+#### Contact App
+
+The contact app is split into two sections. One is for a contact from and the other for signing up to a newsletter.
+The contact form has a custom model, and related form, which requires user to enter their name, email address, phone number, date and a textarea for leaving their message.
+Users do not have to be registered to use this feature.
+
+The newsletter form is a simpler version of the contact form. It only required users to input their name, phone number and email address in order to sign up for the newsletter.
+
+The information from both forms is then sent to the database which can then me managed by the admin on the backend.
 
 
-#### Reservations
+#### Payments App
+
+The payments app also has two sections. One for getting a quote and another for making a payment.
+The quote section has a custom model and form to enable the user to get a quote for a job/project.
+The user is required to fill in their name, phone number, email address, a project type from a list of dropdown options, a deadline date and then a message box for all additional information. A unique quote id number is also generated and attached to the quote for ease of management for the admin.
+
+The payments section is created using Stripe. It is made using custom JavaScript to handle the card payments and the overall submission of the payments form.
+It is all linked to my Stripe account which deals with receiving payments. The views.py file contains the relevant views to handle the stripe payments form created by the JavaScript. There is also custom CSS to help with the styling of the payment form.
 
 
+#### Reviews
 
+The reviews app is where I implemented the CRUD functionality for my website.
+In order to leave a review you must be registered and logged in.
 
-
-#### Contact Us
-
-
-
-#### Menu
-
+The reviews app has a custom model which required users to input a title, the body of the review itself and then a rating between 1 and 5.
+The user name and date of creation are automatically attached to the review. After a review has been left the user can edit or delete a review. They can only do this if the user id of the logged in user matched the user id of the user who created the review. This is to prevent other users deleting reviews they did not write. By enabling the user to be able to edit and delete their reviews after they have created them it gives the reviews app full CRUD functionality.
 
 
 ### Skeleton
