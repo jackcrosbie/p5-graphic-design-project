@@ -76,12 +76,6 @@ h4>a {
     margin-bottom: 5em;
 }
 
-/* ------------------------- bootstrap image carousel */
-
-.carousel-inner img {
-    margin: auto;
-}
-
 /* ------------------------- review posts */
 
 .reviews {
@@ -134,4 +128,12 @@ h4>a {
 
 #forms {
     margin-top: 6em;
+}
+
+/* ------------------------- footer */
+
+footer a {
+    font-size: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
