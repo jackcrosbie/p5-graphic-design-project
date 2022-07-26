@@ -132,6 +132,10 @@ h4>a {
 
 /* ------------------------- footer */
 
+footer {
+    bottom: 0;
+}
+
 footer a {
     font-size: 1.5em;
     padding-left: 1em;
