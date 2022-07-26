@@ -100,7 +100,6 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
@@ -132,7 +131,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
 
