@@ -138,6 +138,10 @@ I tried to keep as close to my wireframes as possible when creating the various 
 
 ### Surface
 
+I chose the green background with yellow running through it to make the website more interesting as it's execution was simple in nature. It helped make the pages standout without having to add too much content on each page.
+
+The blue black color with white text for the navbar was chosen as I felt it stood out enough from the background image without being too much of a contrast and the text stood out well against that in the colour white.
+
 ![background-image](assets/images/cool-background.png)
 ![navbar](assets/images/navbar.PNG)
 
