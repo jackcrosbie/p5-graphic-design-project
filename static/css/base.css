@@ -96,6 +96,14 @@ h4>a {
     overflow: hidden;
 }
 
+/* ------------------------- success message */
+
+.success-msg {
+    border: 1px solid black;
+    background: #061D25;
+    opacity: .9;
+}
+
 /* ------------------------- toast message container */
 
 .message-container {

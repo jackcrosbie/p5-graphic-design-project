@@ -2,33 +2,29 @@
 {% load static %}
 {% block content %}
 {% if request.user.is_authenticated %}
-<div class="container-fluid text-white full-page">
+<div class="container-fluid">
     <div class="row">
-        <div class="col col-md-6">
-            <h2 class="d-flex" id="headings">Delete Your Review</h2>
-            <br>
-            <h2>Delete: {{ object.title }}</h2>
-            <hr>
-        </div>
-        <div class="col col-md-6 mx-auto form-group text-white">
-            <form method="post" id="forms">
-                {% csrf_token %}
-                <div class="mt-3 d-flex">
+        <div class="col mt-2 ml-3">
+            <div class="text-white h4 success-msg text-center">
+                <h2>Delete Your Review</h2>
+                <br>
+                <h2 class="font-italic">Delete: {{ object.title }}</h2>
+                <form method="post" id="forms" class="mb-4">
+                    {% csrf_token %}
                     <h2>ARE YOU SURE?</h2>
                     <button class="btn btn-dark" type="submit" value="Submit">Delete</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-{% else %}
-<div class="container-fluid full-page">
-    <div class="row">
-        <div class="col">
-            <h2>You are not logged in!<br>
-                Please go <a href="{% url 'account_login' %}">HERE</a>to login</h2>
+    {% else %}
+    <div class="container-fluid full-page">
+        <div class="row">
+            <div class="col">
+                <h2>You are not logged in!<br>
+                    Please go <a href="{% url 'account_login' %}">HERE</a>to login</h2>
+            </div>
         </div>
     </div>
-</div>
-{% endif %}
-{% endblock %}
+    {% endif %}
+    {% endblock %}
