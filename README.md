@@ -268,6 +268,13 @@ I feel this was the most intuitive way to keep my website navigational while not
 ![navbar](assets/images/navbar.PNG)
 ![navbar-dropdown](assets/images/navbar-dropdown.PNG)
 
+## Business Model
+
+The business model for JaCros Design is a very simple B2C (Business to Customer) model.
+To help with this model we have a straightforward easy to use interface.
+
+Customers asks for a quote, receive a quote, respond in kind to the quote and can either say no and ends the interaction or agrees to the quote and proceeds with to pay a deposit for work to begin.
+There is no middle man between the customer and the designer.
 
 ## Marketing
 
@@ -315,8 +322,26 @@ This was the outcome I had hoped for.
 
 #### Payments Form
 
+To ensure the payment form was working I navigated to make a payment page. Here i filled in the name and email address. I did inputted one of the trial Stripe card numbers.
+After entering this and hitting submit I was redirected to the payment successful page. I then opened my Stripe account to ensure the "fake payment" had shown up. Once it had shown on my Stripe account I then knew the payments form was working.
+
+![stripe-trial-payment](assets/images/stripe-payment.PNG)
+
+![stripe-customer](assets/images/stripe-customer.PNG)
+
 #### Reviews
 
+As the reviews have the CRUD functionality to my website I tested these last to make sure all was working as intended. I clicked on the reviews link in the navbar and was redirected to the reviews page. Here I could see some sample reviews I had created earlier. I clicked on "Leave a review" and was directed to log in. This was working as designed. Once I had signed in I could then leave a review.
+After finshing the review I was brought back to the reviews page with the new review now there.
+I decided to check the edit function was working first.
+Intially I had an issue where the edit function was duplicating and original review and posting the new edit. I fixed this by removing the href url path on the edit review form in the html.
+This prevent the reviews from being duplicated. Once I had fixed that I went about editing the original review I had left.
+Once I was completed I clicked submit and was redirected to the reviews page which now correctly had the edited version of the review.
+Finally I tested the delete function to ensure this work properly. I clicked on the review I had just edit and this time I hit delete. I was asked to confirm I wanted to delete that review.
+Once I confirmed I was once again redirected to the reviews page and this time the review I had created was no longer there meaning the delete how worked successfully.
+Finally I ensured I could not edit or delete reviews left by other users and once I confirmed this wasn't the case I finished the testing of the reviews section.
+
+![reviews-crud](assets/images/reviews-crud.PNG)
 
 ## Deployment
 
