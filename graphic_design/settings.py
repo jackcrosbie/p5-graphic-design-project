@@ -35,6 +35,11 @@ DEBUG = 'DEVELOPMENT' in os.environ
 CSRF_TRUSTED_ORIGINS = ['https://8000-jackcrosbie-p5graphicde-q9evymuj4sb.ws-eu54.gitpod.io']
 ALLOWED_HOSTS = ['*']
 
+# Add Render.com URL to allowed hosts
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+
 # Application definition
 
 INSTALLED_APPS = [
