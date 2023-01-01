@@ -21,7 +21,7 @@ The website contains information about past projects I've worked on, a payment a
 
 ### Demo
 
-https://jacros-graphic-design.herokuapp.com/ - Live link to website!
+https://jacros-design-new.onrender.com/ - Live link to website!
 
 ## UX
 
